@@ -1,0 +1,15 @@
+def print_rangoli(n):
+    l=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    l1=[]
+    for i in range(n-1,-1,-1):
+        l2=l[i:n]
+        l2.reverse()
+        l2.extend(l[i+1:n])
+        s="".ljust(i*2,"-")+"-".join(l2)+"".ljust(i*2,"-")
+        print(s)
+        l1.append(s)
+    l1.reverse()
+    print("\n".join(l1[1:]))
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
